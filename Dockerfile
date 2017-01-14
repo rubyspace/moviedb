@@ -1,5 +1,5 @@
 FROM ruby:2.3.1-alpine
-MAINTAINER Zack Siri <zack@codemy.net>
+MAINTAINER Vu Nguyen <nthvu.tech@gmail.com>
 
 RUN apk --update add --virtual build-dependencies \ 
                                build-base \

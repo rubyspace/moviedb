@@ -4,8 +4,9 @@ class MoviesController < ApplicationController
   before_filter :beautify_search_url, only: [:index]
 
   def index
-    search  = Movie.custom_search(segmented_query)
-    @aggs   = search.response.aggregations.map { |a| AggregationPresenter.new(a) }
+    #search  = Movie.custom_search(segmented_query)
+    search = Movie.search({query: {match_all: {}}, from: 0, size: 10})
+    @aggs   = [] #search.response.aggregations.map { |a| AggregationPresenter.new(a) }
     @movies = search.results
   end
 
