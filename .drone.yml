@@ -6,10 +6,10 @@ build:
     - bundle exec rake db:create db:schema:load
     - bundle exec rake test
 
-  environment:
-    RACK_ENV: test
-    RAILS_ENV: test
-    SECRET_KEY_BASE: blahblahblah
+  #environment:
+  #  RACK_ENV: test
+  #  RAILS_ENV: test
+  #  SECRET_KEY_BASE: blahblahblah
 
 compose:
   database:
