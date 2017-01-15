@@ -18,3 +18,8 @@ compose:
     image: redis:3.0.7
   elasticsearch:
     image: elasticsearch:2.2.0
+
+cache:
+  mount:
+    - vendor/bundle
+    - .git
